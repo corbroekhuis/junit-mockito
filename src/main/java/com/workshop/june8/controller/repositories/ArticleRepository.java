@@ -7,15 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ArticleRepository extends CrudRepository<Article, Long> {
 
-//    Optional<Article> findById(Long aLong);
-
-
-//    Iterable<Article> findAll();
-
-    @Override
-    <S extends Article> S save(S s);
-
-
-//    <S extends Article> S save(S s);
-
 }

@@ -3,6 +3,7 @@ package com.workshop.june8.calculation;
 import com.workshop.june8.calculation.webservice.BankingService;
 import com.workshop.june8.calculation.exception.CalculationException;
 import com.workshop.june8.calculation.exception.EndpointException;
+import com.workshop.june8.calculation.webservice.BankingServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -64,6 +65,11 @@ public class InterestCalculator {
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
 
+    }
+
+    public static void main(String[] args) throws CalculationException {
+        double total = new InterestCalculator( new BankingServiceImpl()).calculateInterest( 1000D, 2);
+        System.out.println( total);
     }
 
 }
