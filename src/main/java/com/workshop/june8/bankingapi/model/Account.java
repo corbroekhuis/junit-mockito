@@ -6,6 +6,12 @@ public class Account {
     private String Name;
     private String bsn;
 
+    public Account(String accountNr, String name, String bsn) {
+        this.accountNr = accountNr;
+        Name = name;
+        this.bsn = bsn;
+    }
+
     public String getAccountNr() {
         return accountNr;
     }

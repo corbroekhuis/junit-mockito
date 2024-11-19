@@ -13,7 +13,7 @@ public class BankingServiceImpl implements BankingService {
 
         // This method calls an internal or external service that in general is not available during unit testing
 
-        return 1.5;
+        return 0.5;
 
     }
 
